@@ -45,10 +45,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 z-50 border-b border-gray-200 dark:border-gray-800">
+    <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 z-50 border-b border-gray-200 dark:border-gray-800"> 
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-gray-900 dark:text-gray-100 font-medium">Portfolio</a>
+          <a href="https://github.com/satnam1999" className="text-gray-900 dark:text-gray-100 font-medium">Portfolio</a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
