@@ -1,12 +1,11 @@
 import { Switch, Route } from "wouter";
+import { MotionConfig } from "framer-motion";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
-import useCustomCursor from "@/hooks/useCustomCursor";
-import { ThemeProvider } from "@/hooks/useThemeSwitch";
 
 function Router() {
   return (
@@ -17,25 +16,16 @@ function Router() {
   );
 }
 
-function CursorProvider({ children }: { children: React.ReactNode }) {
-  // Initialize custom cursor
-  useCustomCursor();
-  
-  return <>{children}</>;
-}
-
 function App() {
   return (
-    <ThemeProvider defaultTheme="light">
+    <MotionConfig reducedMotion="user">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <CursorProvider>
-            <Toaster />
-            <Router />
-          </CursorProvider>
+          <Toaster />
+          <Router />
         </TooltipProvider>
       </QueryClientProvider>
-    </ThemeProvider>
+    </MotionConfig>
   );
 }
 
