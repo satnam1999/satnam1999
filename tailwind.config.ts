@@ -5,12 +5,21 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["Newsreader Variable", "Newsreader", "Georgia", "Times New Roman", "serif"],
+        sans: ["Jost Variable", "Jost", "system-ui", "sans-serif"],
+        mono: ['"JetBrains Mono Variable"', '"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        paper: "#f2eee7",
+        ink: { DEFAULT: "#1d1b18", soft: "#6b645b" },
+        plum: "#8b5a6b",
+        night: "#1a1917",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
